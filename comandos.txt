@@ -1,0 +1,65 @@
+COMANDOS GIT:
+
+/******** CONFIGURACION GLOBAL GIT *********/
+git config --global user.name
+git config --global user.mail
+git config --global color.ui true
+git config --global --list
+git config --global --unset [propiedad]
+
+
+git init = Iniciar Repositorio
+git help [comando] = Ayuda de comando
+git status = Status de los archivos
+git diff = Ver diferencia entre versiones de archivo
+git checkout [sha] = Saltar a un commit específico o a alguna rama
+git checkout master = Saltar al commit actual
+
+git add -A = Agrega todos los archivos al staging directory
+git add .  = No trabaja con file trackeados
+git add [file] = Agregar archivo individual
+git commit -m "Mensaje" = Crea un commit con mensaje
+git commit -am "Paso workign a commit" = Crea commit directamente del working área
+git commit -ammend -m "Mensaje que sustituye ultimo commit" = Renombra mensaje del último commit
+
+git reset = Elimina commits del repositorio
+
+git reset --soft  = Cambios en repositorio sin afectar staging y working area.
+git reset --mixed = Cambios en repositorio sin afectar working pero si staging.
+git reset --hard  = Borra todo de todas las areas.
+git reset HEAD [file] = Regresar del staging a working
+
+
+ls -la = Ver archivos atributos
+rm -rf = Borrar carpeta
+pwd    = Ruta actual
+
+git log > commits.txt = Pasar commits a archivos
+
+git log --oneline --graph --all = Ramas en dibujo
+
+git config --global alias.nicelog 'log --oneline --graph --all'
+
+git branch -a = Lista las ramas del repositorio
+git branch --merged = Verfica las ramas que han sido fusionadas
+git branch -d experimental = Borra una rama
+
+git merge [rama] = Fusiona la rama actual con la que se específica
+
+
+TIPO DE FUSIONES:
+
+1) FAST FORWARD: El equipo trabaja en archivos separados
+2) MANUAL MERGE: Equipo interactua con los mismos archivos
+
+git config --global http.proxy http://username:password@ipservidor:puerto = Pasar por el proxy
+
+git remote add [name] [direccion] = Agregar una conexion remota
+git remote -v = Ver conexiones remotas
+
+git push [conexion] [rama] = Empujar cambios a repositorio remoto.
+git fetch [conexion] [rama] = Dowload cambios del repositorio a la rama origin/master
+git merge origin/master = Descargar cambios
+git pull origin master = Fetch y merge juntos
+
+
