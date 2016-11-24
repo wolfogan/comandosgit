@@ -34,9 +34,19 @@ ls -la = Ver archivos atributos
 rm -rf = Borrar carpeta
 pwd    = Ruta actual
 
-git log > commits.txt = Pasar commits a archivos
+VERIFICAR COMMITS:
+git log = Ver listado de commits
 
+git log > commits.txt = Pasar commits a archivos
 git log --oneline --graph --all = Ramas en dibujo
+git log -m "mensaje"  --amend = Rectifica y sustituye el ultimo commit
+git log --oneline = muestra el commit resumido en una linea
+git log --decorate = muestra el commit con el head indicado donde esta posicionado 
+git log --stat = explica con detalle en numero de lineas que se convinaron.
+git log -p = es un análisis más profundo del anterior (git log --stat).
+git shortlog =   agrupa por autor y muestra los titulos del commit.
+git log --graph --oneline --decorate = muestra grafica del de historial del repositorio.
+
 
 git config --global alias.nicelog 'log --oneline --graph --all'
 
